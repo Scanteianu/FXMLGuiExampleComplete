@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPage" prefHeight="461.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlguiexamplecomplete.FXMLDocumentController">
+    <children>
+      <GridPane layoutX="23.0" prefHeight="434.0" prefWidth="615.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="281.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.0" minWidth="10.0" prefWidth="29.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="10.0" prefWidth="293.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="257.0" minHeight="10.0" prefHeight="256.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="224.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="157.0" minHeight="0.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="77.0" minHeight="8.0" prefHeight="17.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addClicked" prefHeight="31.0" prefWidth="253.0" text="Add..." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ScrollPane prefHeight="345.0" prefWidth="250.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <content>
+                  <Pane prefHeight="489.0" prefWidth="287.0">
+                     <children>
+                        <TextArea fx:id="displayArea" layoutX="-1.0" layoutY="6.0" prefHeight="484.0" prefWidth="289.0" wrapText="true" />
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+            <Label prefHeight="56.0" prefWidth="190.0" text="Current Array:" GridPane.rowIndex="1" />
+            <Button fx:id="editButton" mnemonicParsing="false" onAction="#editClicked" prefHeight="31.0" prefWidth="254.0" text="Edit..." GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label text="Array Modification:" GridPane.rowIndex="2" />
+            <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeClicked" prefHeight="31.0" prefWidth="259.0" text="Remove:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <HBox prefHeight="62.0" prefWidth="178.0" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="133.0" text="Item to modify:" />
+                  <TextField fx:id="removeIndex" prefHeight="31.0" prefWidth="162.0" promptText="index number..." />
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </GridPane.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+      <Label prefHeight="45.0" prefWidth="313.0" text="Array Modification Program">
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+    </children>
+</AnchorPane>
