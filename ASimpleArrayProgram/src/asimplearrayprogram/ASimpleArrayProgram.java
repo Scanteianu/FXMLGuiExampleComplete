@@ -1,0 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package asimplearrayprogram;
+
+/**
+ *
+ * @author Dan
+ */
+public class ASimpleArrayProgram {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        ArrayHolder ah= new ArrayHolder();
+        for(int i=0; i<10; i++)
+            ah.addObject(new ArrayObject(i,"SomeName"+i,  i*.5));
+        System.out.println(ah.toString());
+        ah.removeObject(ah.find(new ArrayObject(0,"SomeName0",0)));
+        System.out.println(ah.toString());
+    }
+    
+}
